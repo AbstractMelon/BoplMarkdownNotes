@@ -1,3 +1,7 @@
+
+> [!CAUTION]
+> THESE DOCS ARE STILL A WORK IN PROGRESS, DO NOT USE THEM AS IF THEY WERE COMPLETE!.
+
 ## SteamSocket Packet Handling
 
 ### Introduction
