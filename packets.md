@@ -18,16 +18,16 @@ The following table summarizes the packet sizes and their corresponding handling
 
 | Packet Size | Handling Logic                                                                                                                                                                                         |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 105         | If the packet size is 105, it checks if the current lobby is owned by the sender's Steam ID. If so, it processes the packet to start or force start the game based on the game state.                  |
-| 1           | If the packet size is 1, it reads the UI communication packet type and performs actions accordingly, such as acknowledging, suggesting starting the game, or rejecting ready-up requests. |
-| 3           | If the packet size is 3, it updates lobby-related information such as color, team, and readiness status for the sender.                                                                           |
-| 4           | If the packet size is 4, it updates lobby-related information such as selected abilities and readiness status for the sender.                                                                     |
-| 15          | If the packet size is 15, it reads the lobby ready packet and performs actions such as checking for available colors and broadcasting readiness information.                                       |
-| 2           | If the packet size is 2, it reads the lobby initialization packet and performs initialization actions.                                                                                               |
-| 6           | If the packet size is 6, it reads and responds to lobby ping packets.                                                                                                                                |
+| 105         | Checks if the current lobby is owned by the sender's Steam ID. If so, it processes the packet to start or force start the game based on the game state.                  |
+| 1           | Reads the UI communication packet type and performs actions accordingly, such as acknowledging, suggesting starting the game, or rejecting ready-up requests. |
+| 3           | Updates lobby-related information such as color, team, and readiness status for the sender.                                                                           |
+| 4           | Updates lobby-related information such as selected abilities and readiness status for the sender.                                                                     |
+| 15          | Reads the lobby ready packet and performs actions such as checking for available colors and broadcasting readiness information.                                       |
+| 2           | Reads the lobby initialization packet and performs initialization actions.                                                                                               |
+| 6           | Reads and responds to lobby ping packets.                                                                                                                                |
 
 ### Member Variables
 
-- `messageBuffer`: Buffer for storing received message data.
+- `messageBuffer`: Buffer for storing received message data. it is `2048`
 - `ulongConversionArray`, `uintConversionArray`, `ushortConversionArray`: Arrays used for converting data types.
 - `lobbyPingAckBuffer`, `lobbyInitBuffer`, `startRequestBuffer`, `uiCommunicationBuffer`: Buffers for specific types of messages.
